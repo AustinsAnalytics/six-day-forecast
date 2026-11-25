@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monday packet · Six-Day Forecast</title>
+<meta name="description" content="A printable Six-Day Forecast advance packet: opposing hitters and pitchers for one series, in English or Spanish.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M7 4v25' stroke='%23132230' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M8.2 5 27 11 8.2 17Z' fill='%23C8451D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root { color-scheme: light; }
+  body { background: var(--paper); }
+  .bar { display: flex; gap: 10px; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .ph1 { font-weight: 800; font-variation-settings: "wdth" 72; text-transform: uppercase; font-size: 2.2rem; line-height: 1; margin: 6px 0 14px; }
+  .sheet { padding: 18px 0 40px; }
+  .sheet .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .print-howto { margin-top: 14px; }
+  h3.sec { margin: 22px 0 10px; }
+  @media print {
+    @page { size: letter; margin: 0.32in; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root, :root[data-theme="dark"] { --paper: #fff; --card: #fff; --shadow: none; --shoal-2: #cfdde6; --rule: #d8d8d8; --rule-2: #b5b5b5; }
+    body { font-size: 10px; background: #fff; }
+    .bar, .noprint { display: none !important; }
+    .wrap { max-width: none; padding: 0; }
+    .ph1 { font-size: 22px; }
+    .discussion { font-size: 9.5px; padding: 10px 12px; }
+    .sheet { padding: 0; }
+    .sheet .cards { gap: 8px; }
+    .hcard, .pcard { box-shadow: none; padding: 8px 9px 7px; border-color: #999; break-inside: avoid; page-break-inside: avoid; }
+    .nm { font-size: 12px; }
+    .row { font-size: 8.4px; min-height: 11.2px; line-height: 1.2; grid-template-columns: 8.2em 2.9em 1fr; gap: 6px; }
+    .hcard { padding: 6px 8px 5px; }
+    .sub-meta { margin-top: -1px; }
+    .trk { height: 11px; }
+    .trk .band { top: 2px; height: 7px; }
+    .trk .lg { height: 11px; }
+    .trk .dot { top: 1px; width: 9px; height: 9px; margin-left: -4.5px; }
+    .three { gap: 2px; margin-bottom: 4px; }
+    .three li { font-size: 8.4px; line-height: 1.2; }
+    .grp { margin: 3px 0 0; font-size: 6.8px; }
+    .std, .verify-line, .meta, .sub-meta { font-size: 7.8px; }
+    .std { margin-top: 4px; padding-top: 4px; }
+    .hcard .hd, .pcard .hd { padding-bottom: 4px; margin-bottom: 5px; }
+    .mini { gap: 6px; margin-top: 4px; padding-top: 4px; }
+    .mini .cap { font-size: 6.5px; }
+    .mini svg { max-height: 50px; }
+    table.glance { font-size: 9px; }
+    table.glance td { padding: 2.5px 5px; }
+    table.glance th { font-size: 7px; padding: 4px 5px; }
+    .glance-wrap .hint { font-size: 8px; }
+    .pcard table { font-size: 8.5px; }
+    h3.sec { break-before: page; margin-top: 0; }
+    .cover { break-after: page; }
+    .rotation > div { padding: 5px 6px; font-size: 9px; }
+    #pitchers { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .pcard table { font-size: 7.6px; }
+    .pcard th, .pcard td { padding: 2px 3px; }
+    .howto { font-size: 9px; }
+  }
+</style>
+</head>
+<body data-page="print">
+<div class="wrap">
+  <div class="bar noprint">
+    <a href="./#packet">&larr; Back to Six-Day Forecast</a>
+    <span class="hint">Letter paper, portrait. Prints cleanly in black and white: confidence is carried by ink weight, not color.</span>
+    <button class="btn solid" type="button" onclick="window.print()">Print / save as PDF</button>
+  </div>
+  <div class="sheet">
+    <div class="cover" id="cover"><p class="loading">Loading the packet…</p></div>
+    <h3 class="sec" id="hitters-h">Their hitters</h3>
+    <div class="cards" id="hitters"></div>
+    <h3 class="sec" id="pitchers-h">Their pitchers</h3>
+    <div class="cards" id="pitchers"></div>
+  </div>
+</div>
+<div id="howto-src" hidden>
+  <div><svg viewBox="0 0 76 16" width="76" height="16" aria-hidden="true"><line x1="2" x2="74" y1="8" y2="8" stroke="#b5b5b5"/><rect x="30" y="4" width="22" height="8" rx="2" fill="#cfdde6"/><line x1="24" x2="24" y1="2" y2="14" stroke="#132230" stroke-width="1.5"/><circle cx="41" cy="8" r="4.5" fill="#2267A6"/></svg><span>Dot: forecast for this series. Band: his likely true rate (80%). Tick: league average. Blue favors our pitcher, red favors the hitter.</span></div>
+  <div><span class="ink3"><span style="font-weight:700">31%</span><span style="font-weight:600;text-decoration:underline dashed #66717C">31%</span><span style="color:#66717C;text-decoration:underline dotted">31%</span></span><span>Solid, dashed, faint: how much of the number is his own data rather than league average.</span></div>
+  <div><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="#2267A6" stroke-width="2"/></svg><span>Ring: something to attack. Pennant: something to respect. Lines appear only when the number is trustworthy and far from typical.</span></div>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
