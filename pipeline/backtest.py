@@ -201,6 +201,7 @@ def run(level):
             "center"]
     pred = test[["series_id", "team", "player", "date", "metric", "k", "n", "n_s", "n_14", "mu"]].merge(
         pred_feat[keep], on=["player", "date", "metric"], how="left")
+    pred = pred.sort_values(["series_id", "team", "player", "metric"], kind="mergesort").reset_index(drop=True)
     stab = {s: stabilization(data, s) for s in (TRAIN, TEST)}
     result = {
         "level": level, "train": TRAIN, "test": TEST,

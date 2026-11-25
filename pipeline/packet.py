@@ -128,7 +128,7 @@ def pitcher_card(con, level, pid, before, info):
           and game_date < '{before}'
         group by 1, 2 order by 1""").df()
     starts = games[games["first_inning"] == 1]
-    last7 = games[pd.to_datetime(games["game_date"]) >= pd.Timestamp(before) - pd.Timedelta(days=7)]
+    last7 = games[pd.to_datetime(games["game_date"]) >= pd.Timestamp(before) - pd.to_timedelta(7, unit="D")]
     a0 = arsenal.iloc[0]
     return {"id": pid, "name": info["name"], "num": info.get("num"), "throws": info.get("throws"),
             "age": info.get("age"), "games": int(len(games)), "starts": int(len(starts)),

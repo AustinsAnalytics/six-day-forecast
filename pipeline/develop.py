@@ -381,7 +381,7 @@ def track_hitters(con, level, teams, names, mus):
     g = con.execute(f"""
         select batter as player, game_date, game_pk, {", ".join(cols)}
         from pitches where level = '{level}' and season = {SEASON} and game_type = 'R' and bat_team in ({team_list})
-        group by all order by player, game_date""").df()
+        group by all order by player, game_date, game_pk""").df()
     out, tested, shuffled_hits, real_hits = [], 0, 0, 0
     for pid, d in g.groupby("player"):
         if d["n_k"].sum() < 150:

@@ -2,7 +2,8 @@
 
 Every metric here is a rate, so its uncertainty is binomial and the same shrinkage math covers all of them.
 `daily(con, level)` counts each hitter's chances and successes per game day; `in_series(con, level)` counts
-them inside each series. Pitches are regular season, tracked (zone known), and never bunts.
+them inside each series. Pitches are regular season, tracked (zone known), and never bunts. Rows come back in a fixed
+order, so the seeded bootstrap and calibration draws downstream are identical from run to run.
 """
 import pandas as pd
 
@@ -120,7 +121,8 @@ def daily(con, level, who="batter"):
     df = con.execute(f"""
         select season, {who} as player, game_date, {_columns()}
         from pitches where level = '{level}' and game_type = 'R'
-        group by season, {who}, game_date""").df()
+        group by season, {who}, game_date
+        order by season, player, game_date""").df()
     return _long(df, ["season", "player", "game_date"])
 
 
@@ -130,5 +132,6 @@ def in_series(con, level, who="batter"):
         select gs.series_id, p.season, p.{team} as team, p.{who} as player, {_columns()}
         from pitches p join game_series gs using (game_pk)
         where p.level = '{level}' and p.game_type = 'R'
-        group by gs.series_id, p.season, p.{team}, p.{who}""").df()
+        group by gs.series_id, p.season, p.{team}, p.{who}
+        order by gs.series_id, team, player""").df()
     return _long(df, ["series_id", "season", "team", "player"])

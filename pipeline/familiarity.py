@@ -37,7 +37,7 @@ with pa as (
                    range between unbounded preceding and 1 preceding) as prior_series_pa
   from pa
 )
-select * from seen
+select * from seen order by game_pk, ab
 """
 
 
