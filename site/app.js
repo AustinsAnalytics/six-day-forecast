@@ -647,7 +647,7 @@
   function redrawCharts() { ratioChart(); crossChart(); calibChart(); famChart(); weeksChart(); }
   async function specimen() {
     const box = $("#specimen");
-    if (!box || getComputedStyle(box.parentElement).display === "none") return;
+    if (!box) return;
     const idx = await index("JAX");
     const p = await packet("JAX", idx.series[idx.series.length - 1].start);
     const h = p.hitters.filter(x => x.pa >= 150).sort((a, b) => b.three.length - a.three.length || b.pa - a.pa)[0];
