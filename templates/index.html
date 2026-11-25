@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Six-Day Forecast</title>
+<meta name="description" content="An advance-scouting packet for the Jacksonville Jumbo Shrimp and Jupiter Hammerheads that says how sure it is, in English and Spanish, graded against the series that followed.">
+<meta property="og:title" content="Six-Day Forecast">
+<meta property="og:description" content="{{og_description}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://austinsanalytics.github.io/six-day-forecast/">
+<meta property="og:image" content="https://austinsanalytics.github.io/six-day-forecast/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M7 4v25' stroke='%23132230' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M8.2 5 27 11 8.2 17Z' fill='%23C8451D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try { const q = new URLSearchParams(location.search).get("theme"); const t = q || localStorage.getItem("sdf-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+<a class="skip" href="#packet">Skip to the packet</a>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Six-Day Forecast, top of page">
+      <span class="flags" title="S-D-F in signal flags"><svg class="flag" width="14" height="10" viewBox="0 0 14 10" aria-hidden="true"><rect x="0.4" y="0.4" width="13.2" height="9.2" fill="#FBF9F3" stroke="#132230" stroke-width="0.8"/><rect x="4.7" y="3.3" width="4.7" height="3.3" fill="#2267A6"/></svg><svg class="flag" width="14" height="10" viewBox="0 0 14 10" aria-hidden="true"><rect x="0.4" y="0.4" width="13.2" height="9.2" fill="#E2B23E" stroke="#132230" stroke-width="0.8"/><rect x="0.8" y="2.5" width="12.4" height="5.0" fill="#2267A6"/></svg><svg class="flag" width="14" height="10" viewBox="0 0 14 10" aria-hidden="true"><rect x="0.4" y="0.4" width="13.2" height="9.2" fill="#FBF9F3" stroke="#132230" stroke-width="0.8"/><path d="M7.0 0.9 L13.1 5.0 L7.0 9.1 L0.9 5.0 Z" fill="#C8451D"/></svg></span>
+      <b>Six-Day Forecast</b>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#packet">Packet</a><a href="#verify">Verification</a><a href="#stale">Stale by Sunday?</a><a href="#develop">Development</a><a href="#method">Method</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="Switch between light and dark">
+      <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <svg class="isobaths" id="isobaths" aria-hidden="true" preserveAspectRatio="none"></svg>
+  <div class="wrap">
+    <div class="product"><span>Advance scouting forecast</span><span>Miami Marlins affiliates</span><span>Jacksonville, Triple-A &middot; Jupiter, Single-A</span><span>2026 season, verified</span></div>
+    <div class="hero-grid">
+    <div>
+    <div class="hoist" aria-hidden="true"><svg class="flag" width="42" height="28" viewBox="0 0 42 28" aria-hidden="true"><rect x="0.4" y="0.4" width="41.2" height="27.2" fill="#FBF9F3" stroke="#132230" stroke-width="0.8"/><rect x="14.0" y="9.3" width="14.0" height="9.3" fill="#2267A6"/></svg><svg class="flag" width="42" height="28" viewBox="0 0 42 28" aria-hidden="true"><rect x="0.4" y="0.4" width="41.2" height="27.2" fill="#E2B23E" stroke="#132230" stroke-width="0.8"/><rect x="0.8" y="7.0" width="40.4" height="14.0" fill="#2267A6"/></svg><svg class="flag" width="42" height="28" viewBox="0 0 42 28" aria-hidden="true"><rect x="0.4" y="0.4" width="41.2" height="27.2" fill="#FBF9F3" stroke="#132230" stroke-width="0.8"/><path d="M21.0 0.9 L41.1 14.0 L21.0 27.1 L0.9 14.0 Z" fill="#C8451D"/></svg></div>
+    <h1>Six-Day Forecast<span class="sub">An advance-scouting packet that says how sure it is, checked against the six games that followed.</span></h1>
+    <p class="lede">Every Monday in the minors, someone builds the packet for the next six games. Most packets print every number the same way, whether it rests on four hundred pitches or four. I rebuilt the Monday packet for the <strong>Jacksonville Jumbo Shrimp</strong> and the <strong>Jupiter Hammerheads</strong> so that each number carries its own confidence, in English and Spanish, and then I graded every forecast against what happened in the series that followed.</p>
+    </div>
+    <aside class="specimen" aria-label="A hitter card from the featured packet"><div class="tag">From the {{featured_label}} packet</div><div id="specimen"></div></aside>
+    </div>
+    <div class="tiles" role="list">
+      <div class="tile pennant" role="listitem"><span class="k">Standard card, season lines</span><span class="v">{{n_worse}} <small>of {{n_card}}</small></span><span class="d">numbers landed further from the next series than plain league average did, printed the usual way.</span></div>
+      <div class="tile pennant" role="listitem"><span class="k">Last-14-days lines</span><span class="v">{{n_l14_worse}} <small>of {{n_card}}</small></span><span class="d">did worse than league average. Hot and cold streaks did not carry into the next week.</span></div>
+      <div class="tile sea" role="listitem"><span class="k">Six-Day Forecast</span><span class="v">&minus;{{cut_vs_season}}<small>%</small></span><span class="d">error against the season line (median across the card), on {{n_series}} Triple-A series the model never saw.</span></div>
+      <div class="tile" role="listitem"><span class="k">Second look at a pitcher</span><span class="v">{{fam_xw}} <small>pts</small></span><span class="d">of expected wOBA when a hitter faces a pitcher he already saw that week. The book does not go stale by Sunday.</span></div>
+    </div>
+    <div class="cta">
+      <a class="btn solid" href="#packet">Open the Monday packet</a>
+      <a class="btn" href="packets/JAX-{{featured_start}}-en.pdf">Download a packet (PDF)</a>
+      <a class="btn" href="#verify">How it was tested</a>
+    </div>
+  </div>
+</div>
+
+<section id="packet">
+  <div class="wrap">
+    <div class="eyebrow"><svg class="pn" width="26" height="14" viewBox="0 0 26 14" aria-hidden="true"><defs><clipPath id="pn1"><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z"/></clipPath></defs><g clip-path="url(#pn1)"><rect width="26" height="14" fill="#FBF9F3"/><circle cx="8.8" cy="7.0" r="3.8" fill="#C8451D"/></g><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z" fill="none" stroke="#132230" stroke-width="0.8"/></svg><span>01 &mdash; The Monday packet</span></div>
+    <h2>Every 2026 series, as it would have looked on Monday</h2>
+    <div class="cols">
+      <p>Pick a series. Each packet is built only from data before the series' first pitch and from the opponent's active roster that Monday, the way a Fellow would build it. Every number is a forecast for the six games ahead, shrunk toward league average by exactly as much as the data behind it calls for.</p>
+      <p>Switch to <b>What happened</b> to put each forecast next to the series that followed, and switch the language to <b>Español</b> for the version a Spanish-speaking pitcher would get. Each hitter's three lines come only from numbers the card trusts.</p>
+    </div>
+    <div class="howto" aria-label="How to read a card">
+      <div><svg viewBox="0 0 76 16" width="76" height="16" aria-hidden="true"><line class="track" x1="2" x2="74" y1="8" y2="8"/><rect class="band" x="30" y="4" width="22" height="8" rx="2"/><line class="lg" x1="24" x2="24" y1="2" y2="14"/><circle class="dot opp" cx="41" cy="8" r="4.5"/></svg><span>Dot: the forecast. Band: where his true rate likely sits (80%). Tick: league average.</span></div>
+      <div><svg viewBox="0 0 76 16" width="76" height="16" aria-hidden="true"><circle cx="10" cy="8" r="5" fill="var(--sea)"/><circle cx="34" cy="8" r="5" fill="var(--pennant)"/><circle cx="58" cy="8" r="5" fill="var(--ink-2)"/></svg><span>Blue: an edge for our pitcher. Red: an edge for the hitter. Gray: a style, not a strength.</span></div>
+      <div><span class="ink3"><span style="font-weight:700">31%</span><span style="font-weight:600;text-decoration:underline dashed var(--ink-3);text-underline-offset:3px">31%</span><span style="color:var(--ink-3);text-decoration:underline dotted;text-underline-offset:3px">31%</span></span><span>Solid, dashed, faint: how much of the number is his own data rather than league average. A ring marks something to attack; a pennant, something to respect.</span></div>
+    </div>
+    <div class="controls panel" id="controls">
+      <label>Team<select id="team"><option value="JAX">Jacksonville Jumbo Shrimp (AAA)</option><option value="JUP">Jupiter Hammerheads (A)</option></select></label>
+      <label class="grow">Series<select id="series"></select></label>
+      <label>Language<span class="seg" id="lang"><button type="button" data-v="en" aria-pressed="true">English</button><button type="button" data-v="es" aria-pressed="false">Español</button></span></label>
+      <label>View<span class="seg" id="view"><button type="button" data-v="fc" aria-pressed="true">Forecast</button><button type="button" data-v="wh" aria-pressed="false">What happened</button></span></label>
+      <label>&nbsp;<a class="btn" id="print" href="packet.html">Print this packet</a></label>
+    </div>
+    <p class="small muted" style="margin:-6px 0 16px">Printed packets, last series of 2026: {{pdf_links}}. Any series prints from the button above.</p>
+    <div id="disc"></div>
+    <div class="subhead"><h3 id="hitters-h">Their hitters</h3><span class="muted small" id="hitters-n"></span></div>
+    <div class="cards" id="hitters"></div>
+    <div class="subhead"><h3 id="pitchers-h">Their pitchers</h3><span class="muted small" id="pitchers-n"></span></div>
+    <div id="starts"></div>
+    <div class="cards" id="pitchers"></div>
+  </div>
+</section>
+
+<section id="verify">
+  <div class="wrap">
+    <div class="eyebrow"><svg class="pn" width="26" height="14" viewBox="0 0 26 14" aria-hidden="true"><defs><clipPath id="pn2"><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z"/></clipPath></defs><g clip-path="url(#pn2)"><rect width="26" height="14" fill="#2267A6"/><circle cx="8.8" cy="7.0" r="3.5" fill="#FBF9F3"/></g><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z" fill="none" stroke="#132230" stroke-width="0.8"/></svg><span>02 &mdash; What survives the week</span></div>
+    <h2>Most of a standard card is noise by Sunday</h2>
+    <div class="cols">
+      <div>
+        <p>I treated every number on the card as a forecast for the next series and scored it the way forecasters score a forecast: how far it landed from what happened. A six-game sample is noisy by itself, so the score removes the coin-flip part of the in-series result and keeps only the distance from the hitter's true rate that week. The yardstick is the error of assuming a league-average hitter, which is what you know with no report at all.</p>
+        <p>The test is every Triple-A hitter in every 2026 series: {{n_hitter_series}} hitter-series across {{n_series}} series. Every setting (how fast old games fade, how much last season counts, how hard each number shrinks) was tuned on 2025 only.</p>
+      </div>
+      <div>
+        <p><b>Printed raw, {{n_worse}} of {{n_card}} numbers did worse than league average</b> ({{n_worse_sure}} by more than the uncertainty). Only the swing-decision numbers beat it as printed: swing rate, chase rate, zone swing rate, first-pitch swing rate and whiff rate. <b>Every last-14-days line did worse.</b></p>
+        <p>The Six-Day Forecast beat league average on all {{n_card}}, and beat the season line on all {{n_card}}, by a median of {{cut_vs_season}}%. The same held one level down, in Jupiter's Florida State League: {{fsl_n_worse}} of {{fsl_n_card}} season lines worse than league average, and the forecast better on all {{fsl_n_card}}.</p>
+      </div>
+    </div>
+    <div class="figure panel">
+      <div class="ft"><b>Error against the series that followed, relative to assuming a league-average hitter</b>
+        <span class="legend"><span><i style="background:var(--pennant)"></i>Season line (standard card)</span><span><i style="background:var(--violet)"></i>Last 14 days</span><span><i style="background:var(--sea)"></i>Six-Day Forecast</span></span></div>
+      <div class="seg" id="ratio-who" style="margin:6px 0 4px"><button type="button" data-v="all" aria-pressed="true">Every hitter</button><button type="button" data-v="reg" aria-pressed="false">Regulars, 150+ PA</button><button type="button" data-v="fsl" aria-pressed="false">Single-A (Jupiter's league)</button></div>
+      <svg class="chart" id="ratio" role="img" aria-label="Dot plot of error relative to league average for each number on the card"></svg>
+      <div class="cap">Left of the 1&times; line beats knowing nothing; right of it is worse than knowing nothing. Bars are 90% series-bootstrap intervals. Lower is better.</div>
+      <details class="table-toggle"><summary>Show as a table</summary><div class="scroll" id="ratio-table"></div></details>
+    </div>
+    <h3>Why: every number has a crossover point</h3>
+    <div class="cols">
+      <div>
+        <p>A raw rate built on <i>n</i> chances has about <i>M</i>/<i>n</i> times the error of the league average, where <i>M</i> is that number's stabilization point: the sample at which a hitter's own data and the league average deserve equal weight. Below <i>M</i> chances, the raw number is worse than knowing nothing. Shrinking by <i>M</i>/(<i>n</i>+<i>M</i>) is never worse than either, which is all the Six-Day Forecast does, number by number.</p>
+        <p>In Triple-A, chase rate crosses over at about {{M_chase}} pitches out of the zone and first-pitch swing rate at about {{M_fps}} first pitches. Strikeout rate takes about {{M_k}} plate appearances, batting average {{M_avg}} at-bats, and BABIP {{M_babip}} balls in play, more than most hitters get in a season.</p>
+      </div>
+      <div class="figure panel" style="margin-top:0">
+        <div class="ft"><b>The crossover, on real 2026 series</b><select id="cross-metric" aria-label="Number to show"><option value="chase">Chase rate</option><option value="whiff">Whiff rate</option><option value="k">Strikeout rate</option><option value="hardhit">Hard-hit rate</option><option value="avg">Batting average</option><option value="babip">BABIP</option></select></div>
+        <svg class="chart" id="cross" role="img" aria-label="Error of the raw season number relative to league average, by how many chances the hitter had before the series"></svg>
+        <div class="legend" style="margin-top:6px"><span><i style="background:var(--pennant)"></i>Season line</span><span><i style="background:var(--sea)"></i>Six-Day Forecast</span><span><i class="dash" style="border-color:var(--ink-3)"></i>Theory: <i>M</i>/<i>n</i></span></div>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="figure panel">
+        <div class="ft"><b>Do the ranges mean what they say?</b></div>
+        <svg class="chart" id="calib" role="img" aria-label="Share of next-series results inside the 80 percent range"></svg>
+        <div class="cap">Share of next-series results that landed inside the stated 80% range, across the card. The forecast's ranges hold about {{cov80}}%; treating the season number as exact holds {{naive80}}%.</div>
+      </div>
+      <div>
+        <h3 style="margin-top:24px">The nine-box hot zone</h3>
+        <p>The classic three-by-three chart is where this bites hardest. Printed raw, every whiff box was worse than league average, by {{nine_whiff_lo}} to {{nine_whiff_hi}} times. Batting average by box showed no measurable difference between hitters in a six-game window in {{nine_avg_dead}} of 9 boxes. So the card uses halves of the zone (up, down, in, away), which carry about {{half_box}} times as many swings as a single box, and shades them by trust like everything else.</p>
+        <p class="note">Stabilization points for every number, both seasons, are in <a href="#method">the method notes</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stale">
+  <div class="wrap">
+    <div class="eyebrow"><svg class="pn" width="26" height="14" viewBox="0 0 26 14" aria-hidden="true"><defs><clipPath id="pn3"><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z"/></clipPath></defs><g clip-path="url(#pn3)"><rect width="8.7" height="14" fill="#C8451D"/><rect x="8.7" width="8.7" height="14" fill="#FBF9F3"/><rect x="17.3" width="9.7" height="14" fill="#2267A6"/></g><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z" fill="none" stroke="#132230" stroke-width="0.8"/></svg><span>03 &mdash; Does the book go stale by Sunday?</span></div>
+    <h2>Hitters do not catch up over a series</h2>
+    <div class="cols">
+      <div>
+        <p>Minor league teams play the same opponent six days in a row, so relievers often face the same hitters twice in a week. If hitters learn a pitcher on Tuesday, Monday's plan should change by Saturday. I tested it on {{fam_pas}} Triple-A plate appearances from 2024 to 2026, {{fam_familiar}} of them against a pitcher the hitter had already faced earlier in that series.</p>
+        <p>The comparison is inside the same pitcher outing: hitters who already saw him that week against hitters seeing him for the first time, with each hitter's own level, platoon side and times through the order held fixed. That cancels out his stuff that day, his fatigue, the park and the umpire.</p>
+      </div>
+      <div>
+        <p><b>Expected wOBA moved {{fam_xw}} points (95% interval {{fam_lo}} to {{fam_hi}}).</b> Strikeouts dipped by {{fam_k}} points, a small edge in putting the ball in play that did not turn into damage. For scale, the same design finds the known effects plainly: the third time through the order adds {{tto3}} points and the platoon edge adds {{platoon}}. Jupiter's league shows the same: {{fsl_fam_xw}} points ({{fsl_fam_lo}} to {{fsl_fam_hi}}).</p>
+        <p class="note">For a Fellow: plan the week from Monday's packet. The adjustment that pays is inside a game, the third time through, not across the series.</p>
+      </div>
+    </div>
+    <div class="figure panel">
+      <div class="ft"><b>Change in expected wOBA per plate appearance, Triple-A 2024&ndash;2026</b><span class="legend"><span><i style="background:var(--ink-2)"></i>Known effects, a check on the design</span><span><i style="background:var(--sea)"></i>The question</span></span></div>
+      <svg class="chart" id="fam" role="img" aria-label="Estimated effects on expected wOBA with 95 percent intervals"></svg>
+      <div class="cap">Points of expected wOBA (xwOBA on contact, actual value for walks and strikeouts). Bars are 95% intervals with standard errors clustered by series.</div>
+    </div>
+  </div>
+</section>
+
+<section id="develop">
+  <div class="wrap">
+    <div class="eyebrow"><svg class="pn" width="26" height="14" viewBox="0 0 26 14" aria-hidden="true"><defs><clipPath id="pn4"><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z"/></clipPath></defs><g clip-path="url(#pn4)"><rect width="26" height="14" fill="#C8451D"/><rect x="7.3" width="3.1" height="14" fill="#FBF9F3"/><rect y="5.9" width="26" height="2.2" fill="#FBF9F3"/></g><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z" fill="none" stroke="#132230" stroke-width="0.8"/></svg><span>04 &mdash; Is it working?</span></div>
+    <h2>Pitch shape answers in days. Plate discipline answers in months.</h2>
+    <div class="cols">
+      <p>A development plan needs check-in dates, and the right date depends on what is being changed. The same noise math as the card says how long a change has to run before it is clear of chance, at a regular's usual workload. A one-mile-per-hour velocity gain is clear after {{velo_phrase}}; a three-degree arm-angle change after {{arm_phrase}}. A five-point drop in chase rate takes about {{chase_weeks}} weeks of a regular's pitches, and a five-point jump in hard-hit rate takes about {{hh_weeks}} weeks, close to a whole minor league season.</p>
+      <p>Below, the tracker runs on every Jacksonville and Jupiter pitcher in 2026. It looks for a change in each pitch's speed, movement and spin, in arm angle and extension, and in how often each pitch was thrown, after removing each park's camera offset. On the same pitchers with their games shuffled into random order, it fired on {{dev_false}}% of tests, against {{dev_real}}% on the real seasons. It also refuses to call a renamed pitch a new one.</p>
+    </div>
+    <div class="figure panel">
+      <div class="ft"><b>Weeks of a normal workload before a change is clear (90%)</b><span class="legend"><span><i style="background:var(--sea)"></i>Pitch traits (a starter)</span><span><i style="background:var(--pennant)"></i>Hitter rates (a regular)</span></span></div>
+      <svg class="chart" id="weeks" role="img" aria-label="Weeks needed before a change is clear, for pitch traits and hitter rates"></svg>
+      <div class="cap">Hitter rates: binomial noise at the median Triple-A regular's weekly chances. Pitch traits: the median game-to-game wobble of a Triple-A fastball, at {{starts_week}} starts a week.</div>
+    </div>
+    <h3>Receipts: changes the tracker found in 2026</h3>
+    <p class="muted small">Each change is graded only on results after it, not on whether it was the right idea. "Better since" or "worse since" means a 90% chance that called-plus-swinging strikes (whole-delivery and usage changes) or whiffs per swing (changes to one pitch) moved that way. "Too early to tell" means the gap is still inside the noise.</p>
+    <div class="dev" id="dev-cards"></div>
+    <details class="table-toggle" style="margin-top:14px"><summary>Every change found, both affiliates</summary><div class="scroll" id="dev-table"></div></details>
+    <p class="note" style="margin-top:18px">Hitters: on {{hit_tests}} approach tests of Jacksonville and Jupiter regulars (chase, whiffs, zone contact, hard-hit rate), {{hit_alarm_phrase}}. That is not proof nothing changed. It is the honest answer for one season of game data, and it is why a hitter's plan is better checked against the club's own swing-decision and bat-tracking data than against box-score rates in June.</p>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap narrow">
+    <div class="eyebrow"><svg class="pn" width="26" height="14" viewBox="0 0 26 14" aria-hidden="true"><defs><clipPath id="pn5"><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z"/></clipPath></defs><g clip-path="url(#pn5)"><rect width="13.0" height="14" fill="#E2B23E"/><rect x="13.0" width="14.0" height="14" fill="#2267A6"/></g><path d="M0.5 0.5 L25.5 4.9 L25.5 9.1 L0.5 13.5 Z" fill="none" stroke="#132230" stroke-width="0.8"/></svg><span>05 &mdash; How it is built</span></div>
+    <h2>Method, data and limits</h2>
+    <h3>Data</h3>
+    <p>Pitch-level Hawk-Eye data from Baseball Savant's public minor league search: every Triple-A game and every Florida State League game from 2024 to 2026 ({{n_pitches}} pitches), plus schedules, rosters on each Monday, and player details from the MLB Stats API. Those are the two levels with public tracking, which is why Pensacola (Double-A) and Beloit (High-A) are not here. Daytona's park has no pitch tracking, so those games count for results but not for pitch metrics.</p>
+    <h3>The forecast</h3>
+    <p>Each number is a beta-binomial posterior: (<i>k</i> + <i>M</i>&middot;<i>&mu;</i>) / (<i>n</i> + <i>M</i>), where <i>k</i> of <i>n</i> is the hitter's record (recent games weighted more, last season at a discount) and <i>&mu;</i> is the league rate that day. Splits and zone halves shrink toward the hitter's own overall forecast instead of the league. The half-life, last-season weight and <i>M</i> for every number were picked on 2025 series and frozen before 2026 was scored. "Trust" on the card is <i>n</i>/(<i>n</i>+<i>M</i>): the share of the number that is his own data.</p>
+    <h3>Scoring</h3>
+    <p>For each hitter-series, the squared distance from the forecast to the in-series rate, minus the in-series binomial noise (an unbiased correction), weighted by chances. The ratio to the league-average forecast's error is what the charts show, with intervals from resampling whole series. Numbers with no measurable spread between hitters inside a series are marked rather than scored.</p>
+    <div class="scroll"><table class="data" id="stab-table"></table></div>
+    <h3>Checks</h3>
+    <p>The estimators are tested on simulated data with known answers: the crossover math, the noise correction, recovering a planted stabilization point, the change tests' false-alarm rates, and the fixed-effects design recovering a planted effect. A test also confirms that a forecast never sees the day it is forecasting. Every number on this page is filled in from the pipeline's output, not typed. <code>make all</code> rebuilds everything from the raw downloads.</p>
+    <h3>Limits</h3>
+    <p>Public data only: no bat tracking, no biomechanics, no internal grades or development plans, which a club's packet would add. The development receipts are changes the data shows, not the staff's actual plans. Pitch types are Savant's labels, which is why the tracker checks for relabels. The Spanish uses the terms MLB's Spanish-language coverage uses (<i>swings en blanco</i>, <i>macetazos</i>, <i>batazos duros</i>), and a bilingual coach should still read every template before it goes on a clubhouse wall.</p>
+    <h3>The flags</h3>
+    <p>The header spells S&ndash;D&ndash;F in the International Code of Signals, the flag alphabet ships still use, and each section is marked with its numeral pennant. Every affiliate in the Marlins system is named for something in the water, so the packet borrows from the people who forecast it.</p>
+    <h3>Credits</h3>
+    <p>Built with Claude Code, an AI coding assistant. The checks above are how the work stays honest, and three of them caught real mistakes along the way: a bunt flag that briefly made chase rates look like 64%, renamed pitches that looked like new ones, and a probable-starter guess that was no better than chance, so it was cut.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Austin Gentile &middot; Mathematics and Data Science, Centre College</span>
+    <span><a href="https://github.com/AustinsAnalytics/six-day-forecast">Code on GitHub</a> &middot; <a href="https://www.linkedin.com/in/austin-gentile-0560a3342">LinkedIn</a></span>
+    <span class="mono small">Built {{built}} from public data. Not affiliated with MLB, MiLB or any club.</span>
+  </div>
+</footer>
+<div class="tip" id="tip" role="tooltip"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
